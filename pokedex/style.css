@@ -7,6 +7,7 @@ html {
     align-items: center;
     background-color: #e5c1b8;
 }
+
 .carcaca {
     width: 50%;
     height: 98vh;
@@ -22,30 +23,43 @@ html {
 }
 
 .carcacaBotaoControle {
-    position: relative;
-    width: 10%;
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+    width: 30%;
     height: 10%;
 }
 
-.carcacaBotaoControle .cimaBaixo{
+.carcacaBotaoControle .direita {
     position: absolute;
     background-color: #1b1b1b;
     border-radius: 8px;
-    width: 30px;
-    height: 100px;
-    left: 35px;
-    top: 100%;
+    color: white;
+    width: 50%;
+    height: 30px;
+    top: 30%;
+    right: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center; /* <-- AQUI */
+    align-items: center;        /* <-- Para centralizar verticalmente */
+    padding-right: 0px;
 }
 
-.carcacaBotaoControle .esquerdaDireita {
-    width: 100px;
+.carcacaBotaoControle .esquerda {
+    position: absolute;
+    color: white;
+    background-color: #1b1b1b;
+    border-radius: 8px;
+    width: 50%;
     height: 30px;
-    top: 35px;
+    top: 30%;
     left: 0;
     display: flex;
     flex-direction: row;
+    justify-content: center; /* <-- AQUI TAMBÉM SE QUISER TEXTO À DIREITA */
+    align-items: center;
+    padding-right: 10px;
 }
 
 .carcacaBotao {
@@ -224,17 +238,15 @@ html {
 }
 
 .conteudoTelaVerde {
-    width: 50%;
+    width: 70%;
     max-width: 100%;
     height: 100%;
     background-color: #066b2d;
+    border: 2px solid;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    border: 2px solid;
     border-radius: 5px;
-    margin-left: 18%;
     border: 1px solid rgb(0, 0, 0);
 }
 
@@ -242,16 +254,12 @@ html {
     position: absolute;
     bottom: 10px;
     left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transform: translateX(-50%);
-    width: 100%;
+    width: 38%;
     height: 15%;
-}
-
-.botoesDirecionais {
-    position: absolute;
-    bottom: 5px;
-    left: 70%;
-    
 }
 
 .propriedades {
@@ -319,51 +327,6 @@ html {
     font-size: 20px;
     width: 90%;
     text-align: center;
-}
-
-.triangulo {
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 10px solid #5a5a5a;
-    cursor: pointer;
-    margin-left: 60%;
-    margin-top: 10px;
-}
-
-.triangulo2 {
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-right: 10px solid #3d3d3d;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-left: 10px;
-
-}
-
-.trianguloAlto {
-    width: 0;
-    height: 0;
-    border-bottom: 10px solid #3d3d3d;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-.trianguloBaixo {
-    width: 0;
-    height: 0;
-    border-top: 10px solid #3d3d3d;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    cursor: pointer;
-    margin-top: 60px;
-    margin-left: 10px;
 }
 
 .imagemPokemon {
@@ -444,7 +407,6 @@ button {
     height: auto;
     margin: 0 auto;
 }
-
 
 .conteudo {
     display: flex;
