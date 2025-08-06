@@ -4,10 +4,11 @@
 </header>
 <body>
 <?php
-$a = 6;
+$a = 3;
 $b = 435;
 $c = 2;
 $fatorial=0;
+$cont=0;
 
 
 if($a>$b && $a>$c)
@@ -31,8 +32,14 @@ else if($c<$a && $a<$b)
 else if($c<$b && $b<$a)
 	echo $c."-".$b."-".$a;
 
-if($a/$a==0)
-	echo "<br>Esse numero ".$a." é primo";
+for($i=$a-1; $i>1; $i=$i-1){
+    if($a%$i==0)
+        $cont++;
+}
+if($cont==0)
+    echo "<br>".$a." Número é primo";//o println serve para pular linha
+else
+	echo "<br>".$a." Número não é primo";
 
 for($i=$c; $i>0; $i--){
 	$fatorial+=$c*$i;
