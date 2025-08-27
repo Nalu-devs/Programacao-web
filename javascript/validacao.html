@@ -12,7 +12,8 @@
     <form method="post" action="salvar.html" onsubmit="return validarFormulario()">
         <!--O onsubmit declara que quando uma tag form sofrer um submit executa a função indicada nesse caso validarFormulario o return volta pra pagina do formulario-->
         <label>Cep</label>
-        <input onkeydown="validarTexto()" type="text" name="cep" id="cep" class="campo" maxlength="8"><!--onkeydown é pra quando apertar qualquer tecla para baixo-->
+        <input onkeydown="validarTexto()" type="text" name="cep" id="cep" class="campo"
+            maxlength="8"><!--onkeydown é pra quando apertar qualquer tecla para baixo-->
         <button onclick="Clicar()" type="button" id="teste">
             Consultar CEP
         </button>
@@ -38,7 +39,7 @@
     </form>
     <script>
 
-        function Clicar(){
+        function Clicar() {
             var input = document.getElementById("cep")
 
             var url = "https://viacep.com.br/ws/" + input.value + "/json/"
@@ -70,20 +71,19 @@
 
             if (cep.value == "") { /*Se valor de cep ficar vazio aparece campo não preenchido*/
                 alert("Campo não preenchido")
-                cep.style.border='1px solid red'
+                cep.style.border = '1px solid red'
                 return false; /*Não envia o formulario*/
             }
         }
-        
-        function validarTexto()
-            {
-                var cep = document.getElementById("cep")
-                console.log(cep.style.border)/*console.log é oq aparece no f12*/
-                if (cep.style.border!=""){/*Se a borda não for vazia*/
-                    cep.style.border=""/*ele deixa ela vazia*/
-                }
 
+        function validarTexto() {
+            var cep = document.getElementById("cep")
+            console.log(cep.style.border)/*console.log é oq aparece no f12*/
+            if (cep.style.border != "") {/*Se a borda não for vazia*/
+                cep.style.border = ""/*ele deixa ela vazia*/
             }
+
+        }
     </script>
 </body>
 
