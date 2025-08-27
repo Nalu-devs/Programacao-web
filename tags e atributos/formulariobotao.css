@@ -1,8 +1,9 @@
-body{
+body {
     background-color: #e7ecef;
     font-family: Arial, Helvetica, sans-serif;
 }
-.titulo{
+
+.titulo {
     background-color: #274c77;
     color: #ffffff;
     display: grid;

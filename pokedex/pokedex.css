@@ -90,7 +90,7 @@ html {
     margin-top: 2%;
 }
 
-.triangulo{
+.triangulo {
     width: 0;
     height: 0;
     border-top: 30px solid transparent;
@@ -98,8 +98,8 @@ html {
     border-left: 35px solid #ffd900;
     cursor: pointer;
     display: inline-block;
-  }
-  
-  .triangulo:hover {
+}
+
+.triangulo:hover {
     border-left-color: #ffbd06;
-  }
+}
