@@ -1,30 +1,31 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE HTML>  
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP</title>
+<style>
+.error {color: #FF0000;}
+</style>
 </head>
-<body>
-    <p>Funcionou</p>
-    <?php
-        $listFrutas = [
-            "Uva",
-            "Maça",
-            "Abacate",
-            "Mamão"
-        ];
-        // echo "$listFrutas";
-        
-        $tamanho = count($listFrutas);
+<body>  
 
-        for ($i=0; $i<$tamanho; $i++){
-            echo "Frutas: $listFrutas[$i] <br>";
-        }
-
-        foreach ($listFrutas as $index => $fruta){
-            echo "<br> Fruta $index com foreach $fruta <br>";
-        }
-    ?>
+<h2>PHP Form Validation Example</h2>
+<?php
+ require 'menu.php';
+ session_start();
+ if(!isset($_SESSION{'login'})){
+ 
+?>
+<form method="post" action="logar.php">
+  E-mail: <input type="text" name="email">
+  <br><br>
+  Senha: <input type="password" name="senha">
+  <br><br>
+  <input type="submit" name="submit" value="Enviar">  
+</form>
+<?php
+ }
+ else{
+	 echo "Login já realizado";
+ }
+?>
 </body>
 </html>
