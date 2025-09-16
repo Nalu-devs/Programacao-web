@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,11 +9,13 @@
 <body>
   <div class="container mt-5">
     <h1 class="mb-4">Quiz Dragon Ball Z - Teste seu conhecimento!</h1>
+	  
 	 <?php
 	if (isset($_COOKIE['pontuacao'])) {
         echo 'Pontuação alcançada: ' . $_COOKIE['pontuacao'] . ' pontos';
     }
     ?>
+		
 	<br><br>
     <form action="quiz.php" method="POST">
       <div class="mb-4">
@@ -176,6 +177,7 @@
           <label class="form-check-label" for="q10a3">Goten</label>
         </div>
       </div>
+		
 	  <?php
 		if(isset($_GET["msg"]) && !empty($_GET["msg"]))
 		{
@@ -183,6 +185,7 @@
 			echo "<p>$_GET[msg]</p>";
 		}
 		?>
+			
       <button type="submit" class="btn btn-primary">Enviar respostas</button>
 	  <br><br><br>
     </form>
